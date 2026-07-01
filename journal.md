@@ -5,7 +5,7 @@ description: "A custom alarm clock which can be controlled via mobile using blyn
 created_at: "2026-06-29"
 ---
 
-## Total time spent: 2.4 Hours
+## Total time spent: 2.9 Hours
 
 # June 29: Planning!
 
@@ -47,7 +47,7 @@ Sooo I mean not a bad design (I think so..)
 <br>
 <br>
 
-# July 31: Encloser and overall clock design!!!!
+# July 1: Encloser and overall clock design!!!!
 ### LETS GO WITH MINECRAFT THEME
 
 so I was thinking of what to do with the design element of the clock and at first I was wondering if I could make it like aesthetic desk clock style but.. It won't be as cool as minecraft design if I wana showoff to my friends! <br>
@@ -62,3 +62,12 @@ So I went with a tnt design (square with button on top, and screen in one of the
 <br>
 <br>
 
+# July 1 - revisit: Revisiting the design!!!
+### Small issueee
+
+while doing some more research on the display and size I was gonna set.. turns out the display is .5mm larger than what we were going with so we will be extending the side's length to 80mm. (since 4mm will be the thickness of encloser)
+
+**Time spent: 5min**
+
+<br>
+<br>
