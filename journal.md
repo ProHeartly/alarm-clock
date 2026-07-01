@@ -5,7 +5,7 @@ description: "A custom alarm clock which can be controlled via mobile using blyn
 created_at: "2026-06-29"
 ---
 
-## Total time spent: 2.9 Hours
+## Total time spent: 3.9 Hours
 
 # June 29: Planning!
 
@@ -68,6 +68,22 @@ So I went with a tnt design (square with button on top, and screen in one of the
 while doing some more research on the display and size I was gonna set.. turns out the display is .5mm larger than what we were going with so we will be extending the side's length to 80mm. (since 4mm will be the thickness of encloser)
 
 **Time spent: 5min**
+
+<br>
+<br>
+
+# July 1 - CAD: CAD and also re-thinking of design!
+### First of all about design:
+I changed the position of circuit from top to placing it in the bottom..
+
+### About CAD:
+I designed the cad for the encloser according to the design i had in mind.. Still its one of my first time so hope it works...
+
+![cad1](Screenshot%202026-07-01%20223748.png)
+![cad2](Screenshot%202026-07-01%20224043.png)
+![cad3](Screenshot%202026-07-01%20224105.png)
+
+**Time spent: 1h**
 
 <br>
 <br>
