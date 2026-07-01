@@ -46,3 +46,19 @@ Sooo I mean not a bad design (I think so..)
 
 <br>
 <br>
+
+# July 31: Encloser and overall clock design!!!!
+### LETS GO WITH MINECRAFT THEME
+
+so I was thinking of what to do with the design element of the clock and at first I was wondering if I could make it like aesthetic desk clock style but.. It won't be as cool as minecraft design if I wana showoff to my friends! <br>
+
+So I went with a tnt design (square with button on top, and screen in one of the faces.) but the issue is that I'm very beginner in CAD. I hope I can design this..
+
+**FOR REFERENCE:**
+![looks](Looks.jpg)
+
+**Time spent: 30min**
+
+<br>
+<br>
+
