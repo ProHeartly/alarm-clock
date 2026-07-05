@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heartly's Clock - Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: sans-serif; margin: 20px; line-height: 1.6; }
+        .container { max-width: 400px; margin: auto; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        input { margin-bottom: 10px; }
+        hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Heartly's Clock - Settings</h1>
+    <form>
+        <label>Focus Time (m):</label><br>
+        <input type="number" value="25"><br>
+        
+        <label>Break Time (m):</label><br>
+        <input type="number" value="5"><br>
+        
+        <hr>
+        
+        <h3>Alarms</h3>
+        <div>
+            Alarm 1: <input type="number" value="08" style="width:40px"> : 
+            <input type="number" value="00" style="width:40px">
+            <input type="checkbox" checked> Active
+        </div>
+        <div>
+            Alarm 2: <input type="number" value="12" style="width:40px"> : 
+            <input type="number" value="00" style="width:40px">
+            <input type="checkbox"> Active
+        </div>
+        <div>
+            Alarm 3: <input type="number" value="18" style="width:40px"> : 
+            <input type="number" value="00" style="width:40px">
+            <input type="checkbox"> Active
+        </div>
+        
+        <br>
+        <input type="submit" value="Save Settings" style="width:100%; padding: 10px;">
+    </form>
+</div>
+
+</body>
+</html>

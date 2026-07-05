@@ -1,11 +1,11 @@
 ---
 title: "Alarm Clock"
 author: "Heartly"
-description: "A custom alarm clock which can be controlled via mobile using blynk"
+description: "A custom alarm clock which can be ontrolled via webserver"
 created_at: "2026-06-29"
 ---
 
-## Total time spent: 3.9 Hours
+## Total time spent: 6.6 Hours
 
 # June 29: Planning!
 
@@ -84,6 +84,26 @@ I designed the cad for the encloser according to the design i had in mind.. Stil
 ![cad3](Screenshot%202026-07-01%20224105.png)
 
 **Time spent: 1h**
+
+<br>
+<br>
+
+# July 5 - Back after a busy long days..
+### I was little busy due to events but now I'm backkk!!!
+So for today.. I think I have finished this project!!
+
+### Little change in plan
+Instead of just normal alarm clock with wireless config option, I also added pomodoro functionality!!
+
+### Firmware
+I completed all the firmware part of this project with web server support.. I mean I had little issue with library so I had to involve AI. Beside that I also added a "secret.h" file which contains my wifi password which is hidden so that I don't expose my wifi pass to the world :D
+
+### Assembling
+I did the assembling in fusion and rendered the looks of this project!! it looks sooo cooollll but colorless... I mean its in design of tnt so I'm thinking of coloring it with chart paper cuz minecraft pixel art dw dw.
+
+![asm](asm.png)
+
+**Time spent: 2h(hackatime) + 0.7h(CAD, NEW DESIGN and ALL)**
 
 <br>
 <br>
