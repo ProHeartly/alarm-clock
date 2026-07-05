@@ -5,10 +5,8 @@
 #include <WiFi.h>
 #include <NTPClient.h>
 #include <WiFiUdp.h>
-#include "secret.ino"
-
-WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP, "pool.ntp.org", 21600);  // for my timezone
+#include <WebServer.h>
+#include "secret.h"
 
 // --- Pin assignments (change these to match how YOU wired it) ---
 #define TFT_CS 7
@@ -18,11 +16,16 @@ NTPClient timeClient(ntpUDP, "pool.ntp.org", 21600);  // for my timezone
 #define TFT_MOSI 21
 #define TFT_BL 6
 
+#define BUTTON_PIN 3
+#define BUZZER_PIN 5
+
+
 // --- Objects live out here, outside any function ---
 Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_MOSI, TFT_SCLK, TFT_RST);
 
-#define BUTTON_PIN 3
-#define BUZZER_PIN 5
+WiFiUDP ntpUDP;
+NTPClient timeClient(ntpUDP, "pool.ntp.org", 21600);  // for my timezone
+WebServer server(80);
 
 OneButton btn(BUTTON_PIN, true);
 
@@ -36,6 +39,23 @@ unsigned long alarmStartedTime = 0;
 bool isPaused = false;
 bool alarmActive = false;
 
+// config settings
+int focusMinutes = 25;
+int breakMinutes = 5;
+
+void handleRoot() {
+  String html = "<h1>Pomodoro Controller</h1>";
+  html += "<form action='/set' method='GET'>Focus: <input type='number' name='f' value='" + String(focusMinutes) + "'> min<br>";
+  html += "Break: <input type='number' name='b' value='" + String(breakMinutes) + "'> min<br><input type='submit' value='Update'></form>";
+  server.send(200, "text/html", html);
+}
+
+void handleSet() {
+  if (server.hasArg("f")) focusMinutes = server.arg("f").toInt();
+  if (server.hasArg("b")) breakMinutes = server.arg("b").toInt();
+  server.send(200, "text/plain", "Settings updated! Focus: " + String(focusMinutes) + "m, Break: " + String(breakMinutes) + "m");
+}
+
 // setup() runs ONCE when the board powers on
 void setup() {
   Serial.begin(115200);  // lets the board talk to your computer
@@ -47,7 +67,6 @@ void setup() {
   digitalWrite(BUZZER_PIN, LOW);
 
   tft.init(284, 76);           // screen dimensions
-  tft.setColRowStart(82, 18);  // offsets to line up this unusual panel
   tft.setRotation(2);          // orientation, could be different, try 0-3
   tft.fillScreen(ST77XX_BLACK);
 
@@ -58,6 +77,11 @@ void setup() {
   }
   timeClient.begin();
 
+  // SERVER setup
+  server.on("/", handleRoot);
+  server.on("/set", handleSet);
+  server.begin();
+  Serial.println("IP Address: " + WiFi.localIP().toString());
 
   btn.attachClick([]() {
     if (alarmActive) {
@@ -73,10 +97,10 @@ void setup() {
     if (alarmActive) return;
     if (currentState == IDLE) {
       currentState = FOCUS;
-      timeRemaining = 25 * 60;
+      timeRemaining = focusMinutes * 60;
     } else if (currentState == FOCUS) {
       currentState = BREAK;
-      timeRemaining = 5 * 60;
+      timeRemaining = breakMinutes * 60;
     } else {
       currentState = IDLE;
     }
@@ -88,6 +112,7 @@ void setup() {
 // loop() runs OVER and OVER, forever
 void loop() {
   btn.tick();
+  server.handleClient();
   timeClient.update();
 
   if (currentState != IDLE && !isPaused && !alarmActive) {
