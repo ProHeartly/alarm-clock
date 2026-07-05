@@ -107,6 +107,7 @@ void loop() {
     }
   }
   updateDisplay();
+  delay(50);
 }
 
 void updateDisplay() {
