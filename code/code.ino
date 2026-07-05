@@ -59,7 +59,7 @@ Alarm alarms[3] = { { 0, 0, false }, { 0, 0, false }, { 0, 0, false } };
 
 void handleRoot() {
   String html = "<!DOCTYPE html><html><head>";
-  html += "<title>Heartly's Clock - Settings</title>";
+  html += "<title>TNT Clock - Settings</title>";
   html += "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
   html += "<style>";
   html += "body { font-family: sans-serif; margin: 20px; line-height: 1.6; }";
@@ -69,7 +69,7 @@ void handleRoot() {
   html += "</style></head><body>";
 
   html += "<div class='container'>";
-  html += "<h1>Heartly's Clock - Settings</h1>";
+  html += "<h1>TNT Clock - Settings</h1>";
   html += "<form action='/set' method='GET'>";
   
   html += "<label>Focus Time (m):</label><br>";

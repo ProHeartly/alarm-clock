@@ -1,5 +1,5 @@
 ---
-title: "Alarm Clock"
+title: "TNT clock"
 author: "Heartly"
 description: "A custom alarm clock which can be ontrolled via webserver"
 created_at: "2026-06-29"

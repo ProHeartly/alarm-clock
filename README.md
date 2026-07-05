@@ -1,4 +1,4 @@
-# Heartly's clock
+# TNT clock
 
 A custom alarm clock which can be ontrolled via webserver which also has pomodoro functionalityyy!! in theme of minecraft tnt block.
 
@@ -43,7 +43,7 @@ A custom alarm clock which can be ontrolled via webserver which also has pomodor
 ## BOM:
 * ### FROM KIT:
     * 1x Lolin C3 Mini ESP 32 Devboard
-    * 12x Keyboard Switches
+    * 1x Keyboard Switches
     * 1x 2.25in TFT Screen
     * 1x 3.3V Piezo Buzzer
     * 10x M-M Jumper Cables
