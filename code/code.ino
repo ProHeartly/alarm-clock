@@ -43,17 +43,36 @@ bool alarmActive = false;
 int focusMinutes = 25;
 int breakMinutes = 5;
 
+// alarm stuff :0
+struct Alarm {
+  int hour;
+  int minute;
+  bool active;
+};
+
+Alarm alarms[3] = { {0, 0, false}, {0, 0, false}, {0, 0, false} };
+
 void handleRoot() {
-  String html = "<h1>Pomodoro Controller</h1>";
-  html += "<form action='/set' method='GET'>Focus: <input type='number' name='f' value='" + String(focusMinutes) + "'> min<br>";
-  html += "Break: <input type='number' name='b' value='" + String(breakMinutes) + "'> min<br><input type='submit' value='Update'></form>";
+  String html = "<h1>Settings:</h1><form action='/set' method='GET'>Focus: <input type='number' name='f' value='" + String(focusMinutes) + "'>m<br>";
+  html += "Break: <input type='number' name='b' value='" + String(breakMinutes) + "'>m<br><hr>";
+  for(int i=0; i<3; i++) {
+    html += "Alarm " + String(i+1) + ": <input type='number' name='h"+String(i)+"' value='"+String(alarms[i].hour)+"' style='width:40px'>:";
+    html += "<input type='number' name='m"+String(i)+"' value='"+String(alarms[i].minute)+"' style='width:40px'>";
+    html += " Active: <input type='checkbox' name='a"+String(i)+"' " + (alarms[i].active ? "checked" : "") + "><br>";
+  }
+  html += "<input type='submit' value='Save Settings'></form>";
   server.send(200, "text/html", html);
 }
 
 void handleSet() {
   if (server.hasArg("f")) focusMinutes = server.arg("f").toInt();
   if (server.hasArg("b")) breakMinutes = server.arg("b").toInt();
-  server.send(200, "text/plain", "Settings updated! Focus: " + String(focusMinutes) + "m, Break: " + String(breakMinutes) + "m");
+  for(int i=0; i<3; i++) {
+    if (server.hasArg("h"+String(i))) alarms[i].hour = server.arg("h"+String(i)).toInt();
+    if (server.hasArg("m"+String(i))) alarms[i].minute = server.arg("m"+String(i)).toInt();
+    alarms[i].active = server.hasArg("a"+String(i));
+  }
+  server.send(200, "text/plain", "Settings Updated!");
 }
 
 // setup() runs ONCE when the board powers on
@@ -131,11 +150,33 @@ void loop() {
       digitalWrite(BUZZER_PIN, (millis() / 500) % 2);
     }
   }
+  
+  if (!alarmActive) {
+    for(int i=0; i<3; i++) {
+      if (alarms[i].active && alarms[i].hour == timeClient.getHours() && alarms[i].minute == timeClient.getMinutes()) {
+        alarmActive = true;
+        alarmStartedTime = millis();
+        break;
+      }
+    }
+  }
+
   updateDisplay();
   delay(50);
 }
 
 void updateDisplay() {
+  if (alarmActive) {
+    tft.fillScreen(ST77XX_RED);
+    tft.setCursor(20, 20);
+    tft.setTextSize(3);
+    tft.print("ALARM!!");
+    tft.setTextSize(1);
+    tft.setCursor(20, 50);
+    tft.print("Press to stop");
+    return; // Skip drawing the rest
+  }
+
   tft.fillRect(0, 0, 284, 76, ST77XX_BLACK);
   tft.setCursor(10, 20);
   tft.setTextSize(2);
