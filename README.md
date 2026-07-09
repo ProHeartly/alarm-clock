@@ -1,6 +1,6 @@
 # TNT clock
 
-A custom alarm clock which can be ontrolled via webserver which also has pomodoro functionalityyy!! in theme of minecraft tnt block.
+A custom alarm clock which can be controlled via webserver which also has pomodoro functionalityyy!! in theme of minecraft tnt block.
 
 ## Features:
 * Shows current time. kinda like a desk clock
