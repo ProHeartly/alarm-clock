@@ -25,21 +25,21 @@ A custom alarm clock which can be controlled via webserver which also has pomodo
     * single press to stop alarm
 
 ## design:
-![design](asm2.png)
+![design](images/asm2.png)
 
 ## rough design:
-![looks](Looks.jpg)
+![looks](images/Looks.jpg)
 
 ## encloser:
-![cad1](e1.png)
-![cad2](e2.png)
+![cad1](images/e1.png)
+![cad2](images/e2.png)
 
 
 ## circuit in mind:
-![circuit](circuit.jpg)
+![circuit](images/circuit.jpg)
 
 ## web:
-![web](web.png)
+![web](images/web.png)
 
 ## BOM:
 * ### FROM KIT:

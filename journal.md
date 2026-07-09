@@ -38,7 +38,7 @@ So for now, this are the things that I'm planning to use:
 I was gonna make wiring in wokwi but turns out there is no esp32 C3 mini so again I was gonna with the ms paint like in the guide but idk whyy but I felt really odd using it.. SOooo I went with affinity ;D immagine using affinity for circuit design 😂.
 
 Anyways so I build did some document reading to see the pins for each component and finilized on this circuit design:
-![circuit](circuit.jpg)
+![circuit](images/circuit.jpg)
 
 Sooo I mean not a bad design (I think so..)
 
@@ -55,7 +55,7 @@ so I was thinking of what to do with the design element of the clock and at firs
 So I went with a tnt design (square with button on top, and screen in one of the faces.) but the issue is that I'm very beginner in CAD. I hope I can design this..
 
 **FOR REFERENCE:**
-![looks](Looks.jpg)
+![looks](images/Looks.jpg)
 
 **Time spent: 30min**
 
@@ -79,9 +79,9 @@ I changed the position of circuit from top to placing it in the bottom..
 ### About CAD:
 I designed the cad for the encloser according to the design i had in mind.. Still its one of my first time so hope it works...
 
-![cad1](Screenshot%202026-07-01%20223748.png)
-![cad2](Screenshot%202026-07-01%20224043.png)
-![cad3](Screenshot%202026-07-01%20224105.png)
+![cad1](images/Screenshot%202026-07-01%20223748.png)
+![cad2](images/Screenshot%202026-07-01%20224043.png)
+![cad3](images/Screenshot%202026-07-01%20224105.png)
 
 **Time spent: 1h**
 
@@ -101,7 +101,7 @@ I completed all the firmware part of this project with web server support.. I me
 ### Assembling
 I did the assembling in fusion and rendered the looks of this project!! it looks sooo cooollll but colorless... I mean its in design of tnt so I'm thinking of coloring it with chart paper cuz minecraft pixel art dw dw.
 
-![asm](asm.png)
+![asm](images/asm.png)
 
 **Time spent: 2h(hackatime) + 0.7h(CAD, NEW DESIGN and ALL)**
 
@@ -114,10 +114,10 @@ I did the assembling in fusion and rendered the looks of this project!! it looks
 Sooo the project kinda comese to an end with all this adjustments and I will build this in "real" after kit arrives!
 
 so here are the updated ss:
-![asm](asm2.png)
+![asm](images/asm2.png)
 
-![cad1](e1.png)
-![cad2](e2.png)
+![cad1](images/e1.png)
+![cad2](images/e2.png)
 
 ### I also made template design for the outer face of encloser:
 ![t1](template/tnt_top.png)
