@@ -5,7 +5,7 @@ description: "A custom alarm clock which can be ontrolled via webserver"
 created_at: "2026-06-29"
 ---
 
-## Total time spent: 6.6 Hours
+## Total time spent: 8.1 Hours
 
 # June 29: Planning!
 
@@ -104,6 +104,19 @@ I did the assembling in fusion and rendered the looks of this project!! it looks
 ![asm](asm.png)
 
 **Time spent: 2h(hackatime) + 0.7h(CAD, NEW DESIGN and ALL)**
+
+<br>
+<br>
+
+# July 7-9 - I was little busy so I did little progress each day
+### So I had some adjustment to do.. First of all, I assembled the project virtually and used breadboard for keeping the buzzer and controller in place, I think I can use tape for display but made a mount for it, and I also adjusted the hole for switch. And at last, I made hole for connecting adapter to the microcontroller!
+
+Sooo the project kinda comese to an end with all this adjustments and I will build this in "real" after kit arrives!
+
+so here are the updated ss:
+![asm](asm2.png)
+
+**Time spent: 1.5hr**
 
 <br>
 <br>

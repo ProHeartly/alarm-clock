@@ -6,6 +6,7 @@ A custom alarm clock which can be ontrolled via webserver which also has pomodor
 * Shows current time. kinda like a desk clock
 * Acts as a alarm that can be set by accessing the webserver
 * Also can pomodoro functionality!!
+* A adapter hole in side :D
 
 ## How to use:
 * ### during idle:
@@ -24,7 +25,7 @@ A custom alarm clock which can be ontrolled via webserver which also has pomodor
     * single press to stop alarm
 
 ## design:
-![design](asm.png)
+![design](asm2.png)
 
 ## rough design:
 ![looks](Looks.jpg)
@@ -51,4 +52,6 @@ A custom alarm clock which can be ontrolled via webserver which also has pomodor
     * 10x F-F Jumper Cables
 
 * ### OUTSIDE OF KIT:
-    * NONE
+    * 1x Small bread board:<br>
+        * cost: $0.74 <br>
+        * link: https://www.aliexpress.com/item/1005007593618060.html
