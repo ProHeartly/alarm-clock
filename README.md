@@ -31,9 +31,9 @@ A custom alarm clock which can be ontrolled via webserver which also has pomodor
 ![looks](Looks.jpg)
 
 ## encloser:
-![cad1](Screenshot%202026-07-01%20223748.png)
-![cad2](Screenshot%202026-07-01%20224043.png)
-![cad3](Screenshot%202026-07-01%20224105.png)
+![cad1](e1.png)
+![cad2](e2.png)
+
 
 ## circuit in mind:
 ![circuit](circuit.jpg)

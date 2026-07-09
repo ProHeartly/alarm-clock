@@ -1,7 +1,7 @@
 ---
 title: "TNT clock"
 author: "Heartly"
-description: "A custom alarm clock which can be ontrolled via webserver"
+description: "A custom alarm clock which can be controlled via webserver in theme of minecraft tnt"
 created_at: "2026-06-29"
 ---
 
@@ -115,6 +115,15 @@ Sooo the project kinda comese to an end with all this adjustments and I will bui
 
 so here are the updated ss:
 ![asm](asm2.png)
+
+![cad1](e1.png)
+![cad2](e2.png)
+
+### I also made template design for the outer face of encloser:
+![t1](template/tnt_top.png)
+![t1](template/tnt_side.png)
+![t1](template/tnt_bottom.png)
+![t1](template/tnt_side_top.png)
 
 **Time spent: 1.5hr**
 
